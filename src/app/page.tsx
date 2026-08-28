@@ -36,13 +36,17 @@ export default function Home() {
           <div className=" absolute h-[186px] w-[186px] rounded-full border border-white/50 shadow-[0_0_15px_rgba(255,255,255,0.18)] animate-[ringGlow_3s_ease-in-out_infinite]" />
 
           {/* Chữ H */}
-          <span className={`${bodoniModa.className} absolute left-[29px] top-[45px] z-20 text-[5.5rem] font-normal leading-none text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]`}>
+          <span className={`${pinyonScript.className} absolute 
+            left-[20px] top-[45px] 
+            z-20 text-[5.5rem] font-normal leading-none text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]`}>
             N
           </span>
 
           {/* Chữ T */}
           <span
-            className={`${bodoniModa.className} absolute left-[117px] top-[67px] text-[5.5rem] font-normal leading-none text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.9)]`}
+            className={`${pinyonScript.className} absolute 
+              left-[88px] 
+              top-[110px] text-[5.5rem] font-normal leading-none text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.9)]`}
           >
             T
           </span>
@@ -51,7 +55,7 @@ export default function Home() {
           <span
             className="
               absolute
-              left-[96px] top-[84px]
+              left-[90px] top-[95px]
               z-30
               text-[1.8rem]
               text-white

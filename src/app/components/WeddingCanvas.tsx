@@ -426,68 +426,68 @@ export default function WeddingCanvas() {
             // BƯỚM
             // =========================
 
-            butterflies.forEach((b) => {
-                b.t += b.speed;
-                b.wingAngle += 0.2;
+            // butterflies.forEach((b) => {
+            //     b.t += b.speed;
+            //     b.wingAngle += 0.2;
 
-                const centerX = width / 2;
-                const centerY = height / 2;
+            //     const centerX = width / 2;
+            //     const centerY = height / 2;
 
-                const x =
-                    centerX +
-                    Math.cos(b.t) *
-                    (width * b.radiusX);
+            //     const x =
+            //         centerX +
+            //         Math.cos(b.t) *
+            //         (width * b.radiusX);
 
-                const y =
-                    centerY +
-                    Math.sin(b.t * 2) *
-                    (height * b.radiusY);
+            //     const y =
+            //         centerY +
+            //         Math.sin(b.t * 2) *
+            //         (height * b.radiusY);
 
-                const dx = x - b.prevX;
-                const dy = y - b.prevY;
+            //     const dx = x - b.prevX;
+            //     const dy = y - b.prevY;
 
-                const angle =
-                    Math.atan2(dy, dx) +
-                    Math.PI / 2;
+            //     const angle =
+            //         Math.atan2(dy, dx) +
+            //         Math.PI / 2;
 
-                b.prevX = x;
-                b.prevY = y;
+            //     b.prevX = x;
+            //     b.prevY = y;
 
-                const wingScale =
-                    Math.abs(
-                        Math.sin(b.wingAngle)
-                    ) *
-                    0.7 +
-                    0.3;
+            //     const wingScale =
+            //         Math.abs(
+            //             Math.sin(b.wingAngle)
+            //         ) *
+            //         0.7 +
+            //         0.3;
 
-                // Bụi sao
-                if (Math.random() < 0.6) {
-                    butterflyDust.push({
-                        x:
-                            x +
-                            (Math.random() - 0.5) * 10,
+            //     // Bụi sao
+            //     if (Math.random() < 0.6) {
+            //         butterflyDust.push({
+            //             x:
+            //                 x +
+            //                 (Math.random() - 0.5) * 10,
 
-                        y:
-                            y +
-                            (Math.random() - 0.5) * 10,
+            //             y:
+            //                 y +
+            //                 (Math.random() - 0.5) * 10,
 
-                        size:
-                            Math.random() * 1.5 + 0.5,
+            //             size:
+            //                 Math.random() * 1.5 + 0.5,
 
-                        opacity: 1,
+            //             opacity: 1,
 
-                        color: b.color,
-                    });
-                }
+            //             color: b.color,
+            //         });
+            //     }
 
-                drawButterfly(
-                    x,
-                    y,
-                    wingScale,
-                    angle,
-                    b.color
-                );
-            });
+            //     drawButterfly(
+            //         x,
+            //         y,
+            //         wingScale,
+            //         angle,
+            //         b.color
+            //     );
+            // });
 
             // =========================
             // BỤI SAO
