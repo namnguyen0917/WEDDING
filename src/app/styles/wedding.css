@@ -1,0 +1,193 @@
+.wedding-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at bottom,
+      #050b14 0%,
+      #000000 100%
+    );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #ffffff;
+}
+
+.wedding-page canvas {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+}
+
+.wedding-content {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 18px;
+
+  animation: fadeIn 2s ease-out;
+
+  padding: 20px;
+
+  pointer-events: none;
+}
+
+/* =========================
+   TÊN
+========================= */
+
+.names-container {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+}
+
+.name {
+  font-size: 4.2rem;
+
+  color: #ffffff;
+
+  text-shadow:
+    0 0 15px
+    rgba(255, 255, 255, 0.6);
+}
+
+.heart {
+  font-size: 1.8rem;
+
+  color: #ffffff;
+
+  animation:
+    pulse 1.5s infinite;
+}
+
+/* =========================
+   NGÀY
+========================= */
+
+.date-main {
+  font-size: 1.8rem;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  margin-top: 10px;
+
+  text-shadow:
+    0 0 10px
+    rgba(255, 255, 255, 0.3);
+}
+
+.date-sub {
+  font-size: 1.2rem;
+
+  font-weight: 400;
+
+  letter-spacing: 2px;
+
+  color: #d1d5db;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+
+    text-shadow:
+      0 0 20px #ffffff;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes ringGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.18);
+    opacity: 0.8;
+  }
+
+  50% {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+    opacity: 1;
+  }
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .names-container {
+    gap: 10px;
+  }
+
+  .name {
+    font-size: 2.8rem;
+  }
+
+  .heart {
+    font-size: 1.4rem;
+  }
+
+  .date-main {
+    font-size: 1.3rem;
+  }
+
+  .date-sub {
+    font-size: 0.95rem;
+  }
+}
