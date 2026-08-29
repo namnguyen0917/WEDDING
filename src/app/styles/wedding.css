@@ -29,6 +29,7 @@
 }
 
 .wedding-content {
+  top: -120px;
   position: relative;
   z-index: 2;
 
